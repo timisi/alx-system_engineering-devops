@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-# This script is displaying "Holberton School" 10 times
-for i in *
+# Open folder and show names of files
+LIST=$(ls)
+for i in $LIST;
 do
-    echo "$i" | cut -d'-' -f2
+    echo "$i" | cut -d "-" -f 2
 done

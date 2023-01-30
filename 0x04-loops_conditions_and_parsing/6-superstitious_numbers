@@ -1,21 +1,19 @@
 #!/usr/bin/env bash
-# This script is displaying "Holberton School" 10 times
+#Differents countries
 i=1
-while [ "$i" -le 20 ]
+while [ $i -lt 21 ]; 
 do
-    echo "$i"
-    case $i in
-        4)
+      echo "$i"
+      case "$i" in
+      "4")
 	echo "bad luck from China"
-        ;;
-        9)
+	;;
+      "9")
 	echo "bad luck from Japan"
-        ;;
-        17)
+	;;
+      "17")
 	echo "bad luck from Italy"
-        ;;
-    esac
-
-    i=$((i + 1))
+	;;
+      esac
+      (( i++ ))
 done
-i=$i

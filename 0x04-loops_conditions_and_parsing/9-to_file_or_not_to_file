@@ -1,21 +1,18 @@
 #!/usr/bin/env bash
-# This script is displaying "Holberton School" 10 times
-file_h="holbertonschool"
-
-if [ -e "$file_h" ]
+#check file exist
+a="$(pwd)/holbertonschool"
+if [ -e "$a" ]
 then
-
     echo "holbertonschool file exists"
-    if [ -s "$file_h" ]
+    if [ -s "$a" ]
     then
-        echo "holbertonschool file is not empty"
+	echo "holbertonschool file is not empty"
     else
-        echo "holbertonschool file is empty"
+	echo "holbertonschool file is empty"
     fi
-
-    if [ -f "$file_h" ]
+    if [ -f "$a" ]
     then
-        echo "holbertonschool is a regular file"
+	echo "holbertonschool is a regular file"
     fi
 else
     echo "holbertonschool file does not exist"
