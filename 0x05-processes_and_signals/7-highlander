@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
-# Infinity loop and sending signal
-# trap receive signal
-trap "echo I am invincible!!!" SIGTERM
-while :
+# Script that displays Highlander
+trap "echo I am invincible!!!" SIGINT SIGTERM
+while true
 do
 	echo "To infinity and beyond"
 	sleep 2
