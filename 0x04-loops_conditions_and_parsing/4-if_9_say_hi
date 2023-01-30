@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
-# this script prints 10 times the string and say hi in the ninth lap
-i=0
-while [ $((i++)) -lt 10 ];
+# This script is displaying "Holberton School" 10 times
+i=10
+while [ "$i" -gt 0 ]
 do
-	echo "Holberton School"
-
-	if [ $i -eq 9 ];
-	then
-		echo "Hi"
-	fi
+    echo "Holberton School"
+    if [ "$i" -eq 2 ]
+    then
+        echo "Hi"
+    fi
+    i=$((i - 1))
 done
+i=$i

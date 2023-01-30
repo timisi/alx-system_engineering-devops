@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-# script that scan the ip and http code
-awk '{ print $1, $9 }' < apache-access.log
+# This script is displaying "Holberton School" 10 times
+file_h="apache-access.log"
+awk -F' ' '{ print $1, $9}' $file_h

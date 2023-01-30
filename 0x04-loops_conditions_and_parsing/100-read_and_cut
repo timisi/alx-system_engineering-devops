@@ -1,11 +1,7 @@
 #!/usr/bin/env bash
-# Read and cut passwd
-filename='/etc/passwd'
-while read -r line;
+# This script is displaying "Holberton School" 10 times
+file_h="/etc/passwd"
+while IFS= read -r line
 do
-    echo -n "$line" | cut -d ':' -f 1 | tr -d '\n'
-    echo ":" | tr -d '\n'
-    echo -n "$line" | cut -d ':' -f 3 | tr -d '\n'
-    echo ":" | tr -d '\n'
-    echo -n "$line" | cut -d ':' -f 6
-done < $filename
+    echo "$line" | cut -d":" -f1,3,6
+done < "$file_h"
