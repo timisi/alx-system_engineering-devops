@@ -1,19 +1,19 @@
 #!/usr/bin/env bash
-#check file exist
-a="$(pwd)/holbertonschool"
-if [ -e "$a" ]
+# script that detects a file
+file="holbertonschool"
+if [ ! -e "$file" ];
 then
-    echo "holbertonschool file exists"
-    if [ -s "$a" ]
-    then
-	echo "holbertonschool file is not empty"
-    else
-	echo "holbertonschool file is empty"
-    fi
-    if [ -f "$a" ]
-    then
-	echo "holbertonschool is a regular file"
-    fi
+	echo "$file" file does not exist
+	exit 0
+fi
+echo "$file" file exists
+if [ -s "$file" ];
+then
+	echo "$file" file is not empty
 else
-    echo "holbertonschool file does not exist"
+	echo "$file" file is empty
+fi
+if [ -f "$file" ];
+then
+	echo "$file" is a regular file
 fi

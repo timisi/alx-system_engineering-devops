@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
-# Open folder and show names of files
-LIST=$(ls)
-for i in $LIST;
+# This script prints the list directory
+for i in *;
 do
-    echo "$i" | cut -d "-" -f 2
+	echo "$i" | cut -d '-' -f 2
 done

@@ -1,22 +1,18 @@
 #!/usr/bin/env bash
-#fizz fizz buzz
-i=1
-while [ $i -lt 101 ]; 
-    do
-    module3=$((i % 3 ))
-    module5=$((i % 5))
-
-    if [ $module3 -eq 0 ] && [ $module5 -eq 0 ]
-    then
-	echo "FizzBuzz"
-    elif [ $module3 -eq 0 ]
-    then
-	echo "Fizz"
-    elif [ $module5 -eq 0 ]
-    then
-	echo "Buzz"
-    else
-	echo "$i"
-    fi
-    (( i++ ))
+# fizzbuzz
+i=0
+while [ $((i++)) -lt 100 ];
+do
+	if [ $((i % 3)) -eq 0 ] && [ $((i % 5)) -eq 0 ];
+	then
+	    echo FizzBuzz
+	elif [ $((i % 3)) -eq 0 ];
+	then
+	    echo Fizz
+	elif [ $((i % 5)) -eq 0 ];
+	then
+	    echo Buzz
+	else
+	    echo $i
+	fi
 done
